@@ -10,7 +10,7 @@
 # 
 #   - The dice is thrown 300 times.
 ###########
-options(scipen = 100, digits = 4) #delete scientific notation
+options(scipen = 0, digits = 4) #delete scientific notation
 X <- 10^6 # inicial money
 P <- 100  # number of times the game is played
 
@@ -33,6 +33,13 @@ games <- sort(replicate(P, play(X))); games
 
 # Plot
 plot(games)
+# Plot with adjusted scale
+library(ggplot2)
+dfgames <- data.frame(games)
+ggplot(dfgames) +
+  geom_point(aes(1:P,games)) +
+    scale_y_log10() +
+  geom_hline(aes(yintercept=X), color="red")
 # Stripchart
 stripchart(games)
 # Range of values
