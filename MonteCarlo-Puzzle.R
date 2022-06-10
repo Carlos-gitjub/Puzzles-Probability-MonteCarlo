@@ -1,6 +1,5 @@
-# Apuesta. Haces bien en apostar?
+# Should you bet?
 
-# Tienes X dinero en tu banco y se lanza un dado:
 # You have an X amount of money in the back and you are thinking of playing a 
 # game. You would throw a six-sided dice and:  
 #   - If 1, you pay 50% of your current money.
@@ -44,14 +43,15 @@ range(games)
 # probability of 1/6 for a return of -50%
 ER <- round(((1/6)*0.5+(4/6)*0.05-(1/6)*0.5)*100, 2)
 cat(paste0("The expected rate of return for each throw is: ", ER, "%"))
+# Even with a 3.3% expected gain for each throw, is not safe to play as we 
+# would see:
 
-#
 t<-table(games<X)
 percentageOfDefeats<- (t[[2]] / P) * 100
 cat(paste0("Percentage of lost games: ", percentageOfDefeats,"%"))
 
 t2<-table(games<=(X/2))
 percentageOfDefeatsWithHalfTheMoneyOrLess <- (t2[[2]] / P) * 100
-cat(paste0("Porcentaje of lost games that left half the initial money or less: ", percentageOfDefeatsWithHalfTheMoneyOrLess,"%"))
+cat(paste0("Porcentaje of lost games that left with half of the initial money or less: ", percentageOfDefeatsWithHalfTheMoneyOrLess,"%"))
 
 # CONCLUSION: No is not a safe bet to play:  aprox 25% of the times you lose half of your money
