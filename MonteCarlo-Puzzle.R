@@ -1,6 +1,6 @@
 # Should you bet?
 
-# You have an X amount of money in the back and you are thinking of playing a 
+# You have an X amount of money in the bank and you are thinking of playing a 
 # game. You would throw a six-sided dice and:  
 #   - If 1, you pay 50% of your current money.
 # 
