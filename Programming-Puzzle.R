@@ -6,7 +6,7 @@ library(dplyr)
 # - Use each digit once.
 # - NO: exponentiation, modulo, logs, factorials, decimals, rotating nums (9s to make 6),
 # two digits together (1 and 4 aren't 14)
-
+###############################################################
 
 # Generate all the permutations of 6,6,1,3. In this case the function permutations
 # does not allow repeated numbers so whe use 0 for the second 6 
